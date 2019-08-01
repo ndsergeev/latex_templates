@@ -4,7 +4,7 @@
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
-\LoadClass[onecolumn]{article}
+\LoadClass{article}
 
 \usepackage{tgadventor}
 \renewcommand*\familydefault{\sfdefault}
@@ -15,15 +15,19 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{amsmath}
 \usepackage{titlesec}
-
 \usepackage{geometry}
-\geometry{
-    % a4paper,
-    left=8mm,
-    right=8mm,
-    top=8mm,
-    bottom=8mm,
- }
+\usepackage[en-IE]{datetime2}
+\DTMlangsetup[en-IE]{showdayofmonth=false}
+
+\oddsidemargin=-1in
+\topmargin=-1in
+\headheight=0pt
+\headsep=0pt
+\parindent=0pt
+\geometry{a4paper, margin=.5in}
+
+\hyphenpenalty=9999
+\tolerance=500
 
 % Color definitions
 \definecolor{candidate_name_col}{HTML}{005BB0}
@@ -68,4 +72,5 @@
 
 \newcommand{\smallSeparator}[1]{
     \noindent\textcolor{small_sep_col}{\rule{\textwidth}{#1}}
+    \vspace{-5mm}
 }
