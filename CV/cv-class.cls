@@ -71,6 +71,7 @@
 }
 
 \newcommand{\smallSeparator}[1]{
+    \vspace{-1mm}
     \noindent\textcolor{small_sep_col}{\rule{\textwidth}{#1}}
-    \vspace{-5mm}
+    \vspace{-8mm}
 }
